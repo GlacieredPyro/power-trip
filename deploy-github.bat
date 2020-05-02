@@ -1,0 +1,1 @@
+angular-cli-ghpages -d dist/power-trip/ --no-silent

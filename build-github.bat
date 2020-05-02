@@ -1,0 +1,1 @@
+ng build --prod --base-href https://GlacieredPyro.github.io/power-trip
