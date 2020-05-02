@@ -122,8 +122,13 @@
               "devServerTarget": "power-trip:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "power-trip"
 }
