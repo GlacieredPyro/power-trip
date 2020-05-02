@@ -1,0 +1,3 @@
+<app-header *ngIf="router == undefined || router.url != '/login'"></app-header>
+<router-outlet></router-outlet>
+<app-footer *ngIf="router == undefined || router.url != '/login'"></app-footer>

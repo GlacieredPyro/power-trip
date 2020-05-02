@@ -1,0 +1,13 @@
+.table {
+    margin-top:1rem;
+}
+
+table {
+    tr>th[scope="col"].foot {
+        border-top:double 1px gray;
+        border-bottom:double 3px gray;
+    }
+    .currency {
+        text-align: right; 
+    }
+}
