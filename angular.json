@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "power-trip"
+  "defaultProject": "power-trip",
+  "cli": {
+    "analytics": "43978715-a182-4275-8bc7-3352aadbf080"
+  }
 }

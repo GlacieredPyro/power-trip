@@ -11,33 +11,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a routerLink="/propert-overview">Steel Processing (Pta)</a></td>
-        <td>1200m<sup>2</sup></td>
-        <td>5</td>
-        <td>2</td>
-        <td class="currency">R 64,000.00</td>
-      </tr>
-      <tr>
-        <td>Granny Flat (Centurion)</td>
-        <td>45m<sup>2</sup></td>
-        <td>1</td>
-        <td>1</td>
-        <td class="currency">R 700.00</td>
-      </tr>
-      <tr>
-        <td>Storage Container</td>
-        <td>12m<sup>2</sup></td>
-        <td>1</td>
-        <td>1</td>
-        <td class="currency">R 2,000.00</td>
+      <tr *ngFor="let prop of properties">
+        <td><a [routerLink]="['/properties', prop.Id]">{{prop.Name}}</a></td>
+        <td>{{prop.Area}}m<sup>2</sup></td>
+        <td>{{prop.ZoneCount}}</td>
+        <td>{{prop.ContractCount}}</td>
+        <td class="currency">R{{prop.EstimatedMonthlyCost|number:'1.2-2'}}</td>
       </tr>
       <tr>
         <th scope="col" class="foot"></th>
-        <th scope="col" class="foot">1257<sup>2</sup></th>
-        <th scope="col" class="foot">7</th>
-        <th scope="col" class="foot">4</th>
-        <th scope="col" class="foot currency">R 66,700.00</th>
+        <th scope="col" class="foot">{{reduce("Area")}}m<sup>2</sup></th>
+        <th scope="col" class="foot">{{reduce("ZoneCount")}}</th>
+        <th scope="col" class="foot">{{reduce("ContractCount")}}</th>
+        <th scope="col" class="foot currency">R{{reduce("EstimatedMonthlyCost") | number:"1.2-2"}}</th>
       </tr>
     </tbody>
 </table>

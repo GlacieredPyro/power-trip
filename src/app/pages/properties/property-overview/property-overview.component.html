@@ -1,7 +1,8 @@
 <div class="container rounded">
     <div class="row">
         <div class="col-sm">
-            <app-property-list></app-property-list>
+            <app-property-detail *ngIf="selectedProperty != null" [property-model]="selectedProperty" [property-id]="selectedPropertyId"></app-property-detail>
+            <app-property-list *ngIf="selectedProperty == null"></app-property-list>
         </div>
     </div>
 </div>

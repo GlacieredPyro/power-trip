@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MasterDataComponent } from './pages/master-data/master-data.component';
 import { PropertyListComponent } from './pages/properties/property-list/property-list.component';
 import { PropertyOverviewComponent } from './pages/properties/property-overview/property-overview.component';
+import { PropertyDetailComponent } from   './pages/properties/property-detail/property-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PropertyOverviewComponent } from './pages/properties/property-overview/
     FooterComponent,
     MasterDataComponent,
     PropertyListComponent,
-    PropertyOverviewComponent
+    PropertyOverviewComponent,
+    PropertyDetailComponent
   ],
   imports: [
     HttpClientModule,

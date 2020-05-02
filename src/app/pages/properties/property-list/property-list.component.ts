@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PropertyService, Property } from 'src/app/services/property.service';
 
 @Component({
   selector: 'app-property-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyListComponent implements OnInit {
 
-  constructor() { }
+  properties:Property[]
+
+  constructor(private propService:PropertyService) { }
 
   ngOnInit() {
+    this.properties = this.propService.getAllProperties();
+  }
+
+  reduce(col:string) : number {
+    return +this.properties.map(i=>+i[col]).reduce((acc, next) => acc + next);
   }
 
 }
